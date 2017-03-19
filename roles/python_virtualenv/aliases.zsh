@@ -10,15 +10,5 @@ alias nt="nosetests"
 alias mn="python manage.py"
 alias pipgrep="pip freeze | grep -i "
 alias getpip="wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py"
-
-# Conda environments
-alias condaclean="conda clean -tipsy"
-alias mkenv="conda create python=3 ipython jupyter pip -y -n "
-alias mkenv2="conda create python=2 ipython jupyter pip -y -n "
-alias rmenv="conda remove --all --name "
-alias lsenv="conda info -e"
-alias wo="source activate"
-alias de="source deactivate"
-
 alias pf='pip freeze'
 alias wk=workon

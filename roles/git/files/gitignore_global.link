@@ -35,8 +35,9 @@ _sandbox
 
 .scratch
 
-### virtualenv ###
+### Python ###
 .venv
+docs/_build
 
 ### JetBrains ###
 .idea
