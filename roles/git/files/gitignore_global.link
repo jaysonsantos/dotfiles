@@ -24,6 +24,14 @@ Icon
 .autoenv.zsh
 .ropeproject
 
+### Python ###
+.venv
+.python-version
+docs/_build
+
+### JetBrains ###
+.idea
+
 # Sandbox for notes, throwaway scripts, etc.
 _sandbox
 
