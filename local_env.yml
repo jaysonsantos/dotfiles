@@ -16,7 +16,5 @@
     - exa
     - ccat
     - tmux
-    - git-flow
     - fzf
-    - kubernetes
     - {role: osx, when: ansible_os_family == "Darwin"}

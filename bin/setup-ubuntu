@@ -279,7 +279,7 @@ if [ -n "$V_ALL" ] || [ -n "$V_INSTALL_PACKAGES" ] ; then
 
 	if [ -z "$(type -p beet)" ] ; then
 		# https://github.com/sampsyo/beets/issues/915
-		sudo pip install -U beets discogs-client==1.1.1 pylast
+		sudo pip3 install -U beets discogs-client==1.1.1 pylast
 	fi
 
 	#------------------------------------------------------------------------------------------------------------------------
