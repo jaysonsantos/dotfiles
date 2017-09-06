@@ -15,4 +15,5 @@ alias reload!='. ~/.zshrc'
 alias vi="vim"
 alias v="vim"
 
-alias grepalias='alias | grep '
+alias ef='hello work'
+alias h='hello home'

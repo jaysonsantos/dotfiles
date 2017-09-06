@@ -45,3 +45,5 @@ fi
 
 # Docker
 # $(boot2docker shellinit)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
