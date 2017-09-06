@@ -17,6 +17,6 @@
 
 - name: Link pytest.ini file
   file:
-    src: "{{dotfiles_home}}/roles/python/files/pytest.ini"
+    src: "{{dotfiles_home}}/roles/python_virtualenv/files/pytest.ini"
     dest: "{{dotfiles_user_home}}/pytest.ini"
     state: link

@@ -1,6 +1,12 @@
 # https://github.com/zsh-users/prezto/tree/master/modules/python
 export PROJECT_HOME="$HOME/Code"
 
+# A mix of those articles, after banging my head for hours
+# https://stackoverflow.com/questions/11507186/python-virtualenv-no-module-named-virtualenvwrapper-hook-loader
+# https://blog.shichao.io/2014/10/01/setup_virtualenvwrapper_with_pyenv_using_pyenv_virtualenvwrapper.html
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy
+
 # To avoid locale errors in some Python modules.
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
