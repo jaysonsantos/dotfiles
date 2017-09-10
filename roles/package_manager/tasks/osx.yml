@@ -1,7 +1,17 @@
 - name: Update homebrew
   homebrew: update_homebrew=yes
   when: package_update
+  register: brew_update_results
+- debug: var=brew_update_results
 
 - name: Upgrade homebrew packages
   homebrew: upgrade_all=yes
   when: package_upgrade
+  register: brew_upgrade_results
+- debug: var=brew_upgrade_results
+
+- name: Upgrade all casks
+  command: brew cu --all --cleanup --no-brew-update --yes
+  when: package_upgrade
+  register: brew_cask_upgrade_results
+- debug: var=brew_cask_upgrade_results

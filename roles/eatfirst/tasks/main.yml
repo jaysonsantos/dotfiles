@@ -29,7 +29,7 @@
     virtualenv_name: lydia
 
 - name: Set pyenv local version
-  command: "echo pyenv local {{ item.env }} jupyter3 tools3"
+  command: "pyenv local {{ item.env }} jupyter3 tools3"
   args:
     chdir: "~/eatfirst/{{ item.dir }}"
   with_items:

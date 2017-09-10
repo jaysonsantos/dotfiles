@@ -13,5 +13,3 @@ alias update!='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanu
 
 # When you need disk space
 alias cleanup!='brew cleanup --force; brew cask cleanup;'
-
-alias brew-full-upgrade='echo "Brew: update, upgrade, cask and doctor..."; brew update; brew upgrade; brew cu --all --cleanup; brew doctor'

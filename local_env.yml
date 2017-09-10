@@ -8,7 +8,7 @@
     PYENV_ROOT: "{{ pyenv_root }}"
   roles:
     - git
-    - {role: package_manager, tags: ['bootstrap']}
+    - package_manager
     - {role: zsh, tags: ['bootstrap']}
     - vim
     - python_pyenv
