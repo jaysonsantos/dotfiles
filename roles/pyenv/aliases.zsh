@@ -9,7 +9,8 @@ alias pt="py.test"
 alias nt="nosetests"
 alias mn="python manage.py"
 alias getpip="wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py"
+
 alias pf='pip freeze'
-alias wk=workon
+alias pfg='pip freeze | rg -i'
 alias pv='pyenv version'
 alias pvs='pyenv versions'

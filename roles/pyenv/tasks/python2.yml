@@ -1,0 +1,30 @@
+- name: Install latest Python 2 version
+  pyenv:
+    version: 2.7.13
+
+- name: virtualenv for IPython
+  pyenv:
+    subcommand: virtualenv
+    version: 2.7.13
+    virtualenv_name: ipython2
+
+- name: virtualenv for Python 2 tools
+  pyenv:
+    subcommand: virtualenv
+    version: 2.7.13
+    virtualenv_name: tools2
+
+- name: Install ipykernel
+  pip:
+    name: ipykernel
+    state: latest
+    executable: "{{ pyenv_root }}/versions/tools2/bin/pip"
+
+- name: Run ipykernel module
+  command: "{{ pyenv_root }}/versions/tools2/bin/python -m ipykernel install --user"
+
+- name: Install rename
+  pip:
+    name: rename
+    state: latest
+    executable: "{{ pyenv_root }}/versions/tools2/bin/pip"

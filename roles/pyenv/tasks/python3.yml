@@ -1,0 +1,30 @@
+- name: Install latest Python 3 version
+  pyenv:
+    version: 3.6.2
+
+- name: virtualenv for Jupyter
+  pyenv:
+    subcommand: virtualenv
+    version: 3.6.2
+    virtualenv_name: jupyter3
+
+- name: virtualenv for Python 3 tools
+  pyenv:
+    subcommand: virtualenv
+    version: 3.6.2
+    virtualenv_name: tools3
+
+- name: Install jupyter
+  pip:
+    name: jupyter
+    state: latest
+    executable: "{{ pyenv_root }}/versions/jupyter3/bin/pip"
+
+- name: Run ipykernel module
+  command: "{{ pyenv_root }}/versions/jupyter3/bin/python -m ipykernel install --user"
+
+- name: Install youtube-dl
+  pip:
+    name: youtube-dl
+    state: latest
+    executable: "{{ pyenv_root }}/versions/tools3/bin/pip"

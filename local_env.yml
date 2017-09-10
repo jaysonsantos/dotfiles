@@ -4,15 +4,14 @@
 
 - name: Set up local development environment
   hosts: local
+  environment:
+    PYENV_ROOT: "{{ pyenv_root }}"
   roles:
     - git
     - {role: package_manager, tags: ['bootstrap']}
     - {role: zsh, tags: ['bootstrap']}
     - vim
-    - {role: ~/.ansible/roles/suzuki-shunsuke.pyenv, pyenv_is_dependencies_installed: yes}
-    - ~/.ansible/roles/suzuki-shunsuke.pyenv-virtualenv
-    - ~/.ansible/roles/suzuki-shunsuke.pyenv-module
-    - python_virtualenv
+    - pyenv
     - hub
     - zsh-autoenv
     - rg

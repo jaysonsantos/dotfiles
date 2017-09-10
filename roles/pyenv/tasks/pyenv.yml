@@ -1,0 +1,15 @@
+- name: Install pyenv
+  include_role:
+    name: ~/.ansible/roles/suzuki-shunsuke.pyenv
+  vars:
+    pyenv_is_dependencies_installed: yes
+  tags:
+    - bootstrap
+
+- name: Install pyenv-virtualenv
+  include_role:
+    name: ~/.ansible/roles/suzuki-shunsuke.pyenv-virtualenv
+
+- name: Install pyenv-module
+  include_role:
+    name: ~/.ansible/roles/suzuki-shunsuke.pyenv-module
