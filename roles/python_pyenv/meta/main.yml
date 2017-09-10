@@ -1,0 +1,4 @@
+dependencies:
+  - { role: ~/.ansible/roles/suzuki-shunsuke.pyenv, pyenv_is_dependencies_installed: yes, tags: ['bootstrap'] }
+  - { role: ~/.ansible/roles/suzuki-shunsuke.pyenv-virtualenv }
+  - { role: ~/.ansible/roles/suzuki-shunsuke.pyenv-module }

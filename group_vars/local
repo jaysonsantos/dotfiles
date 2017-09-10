@@ -38,7 +38,6 @@ osx_homebrew_packages:
   - highlight
   - terminal-notifier
   - wifi-password
-  - youtube-dl
   - htop-osx
   - httpie
   - diff-so-fancy

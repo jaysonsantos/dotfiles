@@ -1,0 +1,41 @@
+- name: Cave virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_35.stdout }}"
+    virtualenv_name: cave
+
+- name: Infra virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_36.stdout }}"
+    virtualenv_name: infra
+
+- name: Skyler virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_36.stdout }}"
+    virtualenv_name: skyler
+
+- name: Walter Junior virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_35.stdout }}"
+    virtualenv_name: walter-junior
+
+- name: Lydia virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_36.stdout }}"
+    virtualenv_name: lydia
+
+- name: Set pyenv local version
+  command: "echo pyenv local {{ item.env }} jupyter3 tools3"
+  args:
+    chdir: "~/eatfirst/{{ item.dir }}"
+  with_items:
+    - { dir: cave, env: cave }
+    - { dir: infra, env: infra }
+    - { dir: skyler-web, env: skyler }
+    - { dir: skyler-etl, env: skyler }
+    - { dir: walter-junior, env: walter-junior }
+    - { dir: lydia, env: lydia }

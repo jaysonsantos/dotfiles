@@ -10,11 +10,9 @@
 
 - name: Link pytest.ini file
   file:
-    src: "{{dotfiles_home}}/roles/pyenv/files/pytest.ini"
+    src: "{{dotfiles_home}}/roles/python_pyenv/files/pytest.ini"
     dest: "{{dotfiles_user_home}}/pytest.ini"
     state: link
-
-- include: pyenv.yml
 
 # https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14
 - include: python3.yml
