@@ -1,2 +1,5 @@
+echo "Installing Galaxy roles..."
+ansible-galaxy install -r ~/dotfiles/galaxy_roles.yml --roles-path ~/.ansible/roles
+
 echo "Setting up local dev environment..."
 ansible-playbook -i ~/dotfiles/hosts ~/dotfiles/local_env.yml --ask-become-pass $*

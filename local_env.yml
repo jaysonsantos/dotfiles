@@ -9,6 +9,9 @@
     - {role: package_manager, tags: ['bootstrap']}
     - {role: zsh, tags: ['bootstrap']}
     - vim
+    - {role: ~/.ansible/roles/suzuki-shunsuke.pyenv, pyenv_is_dependencies_installed: yes}
+    - ~/.ansible/roles/suzuki-shunsuke.pyenv-virtualenv
+    - ~/.ansible/roles/suzuki-shunsuke.pyenv-module
     - python_virtualenv
     - hub
     - zsh-autoenv
