@@ -1,32 +1,41 @@
+- name: Check if EatFirst directory exist
+  stat: path="{{dotfiles_user_home}}/eatfirst"
+  register: eatfirst_stat
+
 - name: Cave virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_35.stdout }}"
+    version: "{{ latest_python_35 }}"
     virtualenv_name: cave
+  when: eatfirst_stat.stat.exists
 
 - name: Infra virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
     virtualenv_name: infra
+  when: eatfirst_stat.stat.exists
 
 - name: Skyler virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
     virtualenv_name: skyler
+  when: eatfirst_stat.stat.exists
 
 - name: Walter Junior virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_35.stdout }}"
+    version: "{{ latest_python_35 }}"
     virtualenv_name: walter-junior
+  when: eatfirst_stat.stat.exists
 
 - name: Lydia virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
     virtualenv_name: lydia
+  when: eatfirst_stat.stat.exists
 
 - name: Set pyenv local version
   command: "pyenv local {{ item.env }} jupyter3 tools3"
@@ -39,3 +48,4 @@
     - { dir: skyler-etl, env: skyler }
     - { dir: walter-junior, env: walter-junior }
     - { dir: lydia, env: lydia }
+  when: eatfirst_stat.stat.exists

@@ -1,21 +1,17 @@
-- name: Get latest Python 2 version
-  shell: ﻿pyenv install --list | cut -b 3- | grep -E '^2\.7\.' | tail -n 1
-  register: latest_python_27
-
-- name: "Install Python {{ latest_python_27.stdout }}"
+- name: "Install Python {{ latest_python_27 }}"
   pyenv:
-    version: "{{ latest_python_27.stdout }}"
+    version: "{{ latest_python_27 }}"
 
 - name: virtualenv for IPython
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_27.stdout }}"
+    version: "{{ latest_python_27 }}"
     virtualenv_name: ipython2
 
 - name: virtualenv for Python 2 tools
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_27.stdout }}"
+    version: "{{ latest_python_27 }}"
     virtualenv_name: tools2
 
 - name: Install ipykernel

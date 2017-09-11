@@ -1,29 +1,21 @@
-- name: Get latest Python 3.6 version
-  shell: ﻿pyenv install --list | cut -b 3- | grep -E '^3\.6\.' | tail -n 1
-  register: latest_python_36
-
-- name: "Install Python {{ latest_python_36.stdout }}"
+- name: "Install Python {{ latest_python_36 }}"
   pyenv:
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
 
-- name: Get latest Python 3.5 version
-  shell: ﻿pyenv install --list | cut -b 3- | grep -E '^3\.5\.' | tail -n 1
-  register: latest_python_35
-
-- name: "Install Python {{ latest_python_35.stdout }}"
+- name: "Install Python {{ latest_python_35 }}"
   pyenv:
-    version: "{{ latest_python_35.stdout }}"
+    version: "{{ latest_python_35 }}"
 
 - name: virtualenv for Jupyter
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
     virtualenv_name: jupyter3
 
 - name: virtualenv for Python 3 tools
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36.stdout }}"
+    version: "{{ latest_python_36 }}"
     virtualenv_name: tools3
 
 - name: Install jupyter
