@@ -50,18 +50,30 @@ osx_cask_packages:
   # Browsers
   - google-chrome
   - firefox
+
+  # Network
+  - filezilla
+  - ngrok
+  - teamviewer
+
   # Utilities
   - iterm2
+
   # Vagrant/Virtualbox
   - virtualbox
-  # chat
+
+  # Chat
   - slack
   - telegram
-  # Password manager
+  - quassel-client
+
   # Backup/storage
   - dropbox
+
   # Media/Music
   - vlc
+  - beardedspice
+
   # Images
   # - imageoptim  # optimizing images
   # - kap  # capturing gifs
@@ -71,8 +83,10 @@ osx_cask_packages:
   # Fonts
   - font-ubuntu
   - font-cousine
+
   # Databases
   - psequel  # postgres client
+  
   # VPN
   - nordvpn
 
