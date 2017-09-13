@@ -12,6 +12,8 @@
     - {role: zsh, tags: ['bootstrap']}
     - vim
     - python_pyenv
+    - python_personal
+    - python_eatfirst
     - hub
     - zsh-autoenv
     - rg
@@ -20,4 +22,3 @@
     - tmux
     - fzf
     - {role: osx, when: ansible_os_family == "Darwin"}
-    - eatfirst

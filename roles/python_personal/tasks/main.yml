@@ -1,0 +1,27 @@
+- name: clitoolkit virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_36 }}"
+    virtualenv_name: clitoolkit
+
+- name: python-dontforget virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_35 }}"
+    virtualenv_name: python-dontforget
+
+- name: scrapy-tegenaria virtualenv
+  pyenv:
+    subcommand: virtualenv
+    version: "{{ latest_python_36 }}"
+    virtualenv_name: scrapy-tegenaria
+
+- name: Set pyenv local version
+  command: "pyenv local {{ item }} jupyter3 tools3"
+  args:
+    chdir: "~/Code/{{ item }}"
+    creates: "~/Code/{{ item }}/.python-version"
+  with_items:
+    - clitoolkit
+    - python-dontforget
+    - scrapy-tegenaria
