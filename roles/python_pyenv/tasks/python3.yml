@@ -26,6 +26,8 @@
 
 - name: Run ipykernel module
   command: "{{ pyenv_root }}/versions/jupyter3/bin/python -m ipykernel install --user"
+  args:
+    creates: "~/Library/Jupyter/kernels/python3"
 
 - name: Install youtube-dl
   pip:

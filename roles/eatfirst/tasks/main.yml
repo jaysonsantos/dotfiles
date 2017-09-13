@@ -1,4 +1,4 @@
-- name: Check if EatFirst directory exist
+- name: Check if EatFirst directory exists
   stat: path="{{dotfiles_user_home}}/eatfirst"
   register: eatfirst_stat
 
@@ -41,6 +41,7 @@
   command: "pyenv local {{ item.env }} jupyter3 tools3"
   args:
     chdir: "~/eatfirst/{{ item.dir }}"
+    creates: "~/eatfirst/{{ item.dir }}/.python-version"
   with_items:
     - { dir: cave, env: cave }
     - { dir: infra, env: infra }

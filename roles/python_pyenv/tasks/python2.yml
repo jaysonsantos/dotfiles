@@ -22,6 +22,8 @@
 
 - name: Run ipykernel module
   command: "{{ pyenv_root }}/versions/tools2/bin/python -m ipykernel install --user"
+  args:
+    creates: "~/Library/Jupyter/kernels/python2"
 
 - name: Install rename
   pip:
