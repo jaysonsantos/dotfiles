@@ -1,5 +1,1 @@
-- include: osx.yml
-  when: ansible_os_family == "Darwin"
-
-- include: redhat.yml
-  when: ansible_os_family == "RedHat"
+- include: "{{ ansible_os_family | lower }}.yml"

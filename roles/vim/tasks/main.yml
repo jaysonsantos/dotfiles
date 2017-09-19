@@ -1,10 +1,5 @@
 # Installation
-- include: debian.yml
-  when: ansible_os_family == "Debian"
-- include: redhat.yml
-  when: ansible_os_family == "RedHat"
-- include: osx.yml
-  when: ansible_os_family == "Darwin"
+- include: "{{ ansible_os_family | lower }}.yml"
 
 # Plugin manager
 - name: Makes sure autoload directory exists
