@@ -29,7 +29,6 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
   'history-substring-search' \
-  'zsh-notify' \
   'directory' \
   'spectrum' \
   'utility' \
@@ -37,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'git'
   # 'python'
+  # 'zsh-notify' # Making terminal-notifier consume a lot of CPU
 #
 # Editor
 #
