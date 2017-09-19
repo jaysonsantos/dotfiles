@@ -58,6 +58,7 @@ osx_cask_packages:
 
   # Utilities
   - iterm2
+  - raindropio
 
   # Vagrant/Virtualbox
   - virtualbox
