@@ -30,6 +30,7 @@ if [[ "$1" == 'home' ]]; then
 	echo 'Killing work apps'
 	pkill pycharm
 	pkill 'Mia for Gmail'
+	pkill Opera
 	pkill Skype
 	pkill -9 Slack
 	pkill -9 Spotify
