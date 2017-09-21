@@ -1,8 +1,8 @@
-- name: clitoolkit virtualenv
+- name: python-clitoolkit virtualenv
   pyenv:
     subcommand: virtualenv
     version: "{{ latest_python_36 }}"
-    virtualenv_name: clitoolkit
+    virtualenv_name: python-clitoolkit
 
 - name: python-dontforget virtualenv
   pyenv:
@@ -22,6 +22,6 @@
     chdir: "~/Code/{{ item }}"
     creates: "~/Code/{{ item }}/.python-version"
   with_items:
-    - clitoolkit
+    - python-clitoolkit
     - python-dontforget
     - scrapy-tegenaria
