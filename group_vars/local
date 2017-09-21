@@ -44,6 +44,7 @@ osx_homebrew_packages:
   - docker-clean
   - rename
   - memcached
+  - pgbadger
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
