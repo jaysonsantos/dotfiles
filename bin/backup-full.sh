@@ -1,6 +1,6 @@
 #!/bin/bash
 usage() {
-	echo "Usage: $(basename $0) [-hancdfjpvw]
+	echo "Usage: $(basename $0) [-hancdfjvw]
 A single script to do all backups.
 
 OPTIONS
@@ -11,7 +11,6 @@ OPTIONS
 -d  Deja-dup files (backup tool)
 -f  Home folder and source code
 -j  Jaque
--p  Pictures (/pix directory)
 -v  Videos
 -w  Windows 7 files
 -h  Help"
@@ -28,7 +27,6 @@ V_VIDEOS=
 V_WINDOWS=
 V_SOMETHING_CHOSEN=
 V_JAQUE=
-V_PIX=
 while getopts "nkacdfjpvwh" V_ARG ; do
 	case $V_ARG in
 	n)	V_DRY_RUN=-n ;;
@@ -40,7 +38,6 @@ while getopts "nkacdfjpvwh" V_ARG ; do
 	v)	V_SOMETHING_CHOSEN=1 ; V_VIDEOS=1 ;;
 	w)	V_SOMETHING_CHOSEN=1 ; V_WINDOWS=1 ;;
 	j)	V_SOMETHING_CHOSEN=1 ; V_JAQUE=1 ;;
-	p)	V_SOMETHING_CHOSEN=1 ; V_PIX=1 ;;
 	h)	usage 1 ;;
 	?)	usage 2 ;;
 	esac
@@ -126,14 +123,6 @@ function sync_dir() {
 		fi
 	done
 }
-
-if [ -n "$V_ALL" ] || [ -n "$V_PIX" ] ; then
-	echo "Pictures backup"
-
-	V_SOURCE_DIR='/home/wagner/Pictures'
-	V_BACKUP_DIRS=$G_EXTERNAL_HDD/backup
-	sync_dir 'shotwell'
-fi
 
 if [ -n "$V_ALL" ] || [ -n "$V_WINDOWS" ] ; then
 	V_SOURCE_DIR='/mnt/windows7'
