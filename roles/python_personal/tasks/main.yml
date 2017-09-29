@@ -1,27 +1,13 @@
-- name: python-clitoolkit virtualenv
+- name: python-binary-memcached virtualenv
   pyenv:
     subcommand: virtualenv
     version: "{{ latest_python_36 }}"
-    virtualenv_name: python-clitoolkit
-
-- name: python-dontforget virtualenv
-  pyenv:
-    subcommand: virtualenv
-    version: "{{ latest_python_35 }}"
-    virtualenv_name: python-dontforget
-
-- name: scrapy-tegenaria virtualenv
-  pyenv:
-    subcommand: virtualenv
-    version: "{{ latest_python_36 }}"
-    virtualenv_name: scrapy-tegenaria
+    virtualenv_name: python-binary-memcached
 
 - name: Set pyenv local version
   command: "pyenv local {{ item }} jupyter3 tools3"
   args:
-    chdir: "~/Code/{{ item }}"
-    creates: "~/Code/{{ item }}/.python-version"
+    chdir: "~/p/personal/{{ item }}"
+    creates: "~/p/personal/{{ item }}/.python-version"
   with_items:
-    - python-clitoolkit
-    - python-dontforget
-    - scrapy-tegenaria
+    - python-binary-memcached

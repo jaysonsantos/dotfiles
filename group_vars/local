@@ -55,11 +55,12 @@ osx_cask_packages:
   # Network
   - filezilla
   - ngrok
-  - teamviewer
 
   # Utilities
   - iterm2
   - raindropio
+  - docker
+  - pycharm
 
   # Vagrant/Virtualbox
   - virtualbox

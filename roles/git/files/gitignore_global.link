@@ -6,7 +6,6 @@
 .LSOverride
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -28,6 +27,7 @@ Icon
 .venv
 .python-version
 docs/_build
+.ipynb_checkpoints
 
 ### JetBrains ###
 .idea
@@ -35,17 +35,8 @@ docs/_build
 # Sandbox for notes, throwaway scripts, etc.
 _sandbox
 
-.ipynb_checkpoints
-
 .xmark.*
 
 .konchrc
 
 .scratch
-
-### Python ###
-.venv
-docs/_build
-
-### JetBrains ###
-.idea

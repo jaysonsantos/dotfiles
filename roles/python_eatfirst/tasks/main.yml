@@ -40,8 +40,8 @@
 - name: Set pyenv local version
   command: "pyenv local {{ item.env }} jupyter3 tools3"
   args:
-    chdir: "~/eatfirst/{{ item.dir }}"
-    creates: "~/eatfirst/{{ item.dir }}/.python-version"
+    chdir: "~/p/eatfirst/{{ item.dir }}"
+    creates: "~/p/eatfirst/{{ item.dir }}/.python-version"
   with_items:
     - { dir: cave, env: cave }
     - { dir: infra, env: infra }
