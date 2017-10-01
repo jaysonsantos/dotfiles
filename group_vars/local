@@ -89,7 +89,7 @@ osx_cask_packages:
 
   # Databases
   - psequel  # postgres client
-  
+
   # VPN
   - nordvpn
 
@@ -101,3 +101,11 @@ npm_global_packages:
   # - eslint-config-airbnb
   # - eslint-plugin-react
   # - babel-eslint
+apt_packages:
+  - curl
+  - wget
+  - htop
+  - lsof
+  - strace
+  - gnupg-agent
+
