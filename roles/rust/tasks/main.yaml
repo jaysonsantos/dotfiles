@@ -1,20 +1,22 @@
-- name: "Install rustup"
+- include: "{{ ansible_os_family | lower }}.yml"
+
+- name: Install rustup
   shell: "curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path  -y --default-toolchain nightly -v"
   register: rustup_output
   args:
     creates: ~/.cargo/env
 - debug: var=rustup_output
 
-- name: "Check last toolchain update"
+- name: Check last toolchain update
   # If file does not exists it returs true otherwise it executes the find
-  shell: "test ! -f ~/.cargo/last_toolchain_check || test -n \"$(find ~/.cargo -depth 1 -iname last_toolchain_check -ctime '+12h')\""
+  shell: 'test ! -f ~/.cargo/last_toolchain_check || test -n "$(find ~/.cargo -maxdepth 1 -iname last_toolchain_check -cmin +12)"'
   register: last_toolchain_check
   ignore_errors: true
 - debug: var=last_toolchain_check
 
 - debug: var=last_toolchain_check
 - name: Install/update toolchains
-  command: "rustup toolchain add {{ item }}"
+  command: "~/.cargo/bin/rustup toolchain add {{ item }}"
   with_items:
     - stable
     - nightly
@@ -25,3 +27,15 @@
 - name: Touch last_toolchain_check file to avoid upgrading again
   command: "touch ~/.cargo/last_toolchain_check"
   when: last_toolchain_check | success
+
+- name: Install rust utils
+  command: "~/.cargo/bin/cargo install {{ item.pkg }}"
+  args:
+    creates: "~/.cargo/bin/{{ item.bin }}"
+  with_items:
+      - {pkg: cargo-update, bin: cargo-install-update}
+      - {pkg: clippy, bin: cargo-clippy}
+      - {pkg: clog-cli, bin: clog}
+      - {pkg: exa, bin: exa}
+      - {pkg: ripgrep, bin: rg}
+
