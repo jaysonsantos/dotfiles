@@ -1,7 +1,6 @@
 - name: Install dependencies
-  apt:
+  homebrew:
     name: "{{ item }}"
   with_items:
-    - libssl-dev
+    - openssl
     - cmake
-  become: true
