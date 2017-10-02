@@ -14,7 +14,6 @@
   ignore_errors: true
 - debug: var=last_toolchain_check
 
-- debug: var=last_toolchain_check
 - name: Install/update toolchains
   command: "~/.cargo/bin/rustup toolchain add {{ item }}"
   with_items:
@@ -24,12 +23,8 @@
   when: last_toolchain_check | success
 - debug: var=toolchains_output
 
-- name: Touch last_toolchain_check file to avoid upgrading again
-  command: "touch ~/.cargo/last_toolchain_check"
-  when: last_toolchain_check | success
-
 - name: Install rust utils
-  command: "~/.cargo/bin/cargo install {{ item.pkg }}"
+  command: "~/.cargo/bin/cargo +nightly install {{ item.pkg }}"
   args:
     creates: "~/.cargo/bin/{{ item.bin }}"
   with_items:
@@ -39,3 +34,12 @@
       - {pkg: exa, bin: exa}
       - {pkg: ripgrep, bin: rg}
 
+- name: Update installed binaries
+  command: "~/.cargo/bin/cargo +nightly install-update -a"
+  register: updates_output
+  when: last_toolchain_check | success
+- debug: var=updates_output
+
+- name: Touch last_toolchain_check file to avoid upgrading again
+  command: "touch ~/.cargo/last_toolchain_check"
+  when: last_toolchain_check | success

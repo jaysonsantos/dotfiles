@@ -21,5 +21,5 @@
     - tmux
     - fzf
     - gnome_do
-    - rust
+    - {role: rust, tags: rust}
     - {role: osx, when: ansible_os_family == "Darwin"}
