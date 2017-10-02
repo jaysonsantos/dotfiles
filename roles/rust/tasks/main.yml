@@ -40,6 +40,16 @@
   when: last_toolchain_check | success
 - debug: var=updates_output
 
+- name: Install components
+  shell: "~/.cargo/bin/rustup component add {{ item }}"
+  register: components_output
+  with_items:
+    - rust-src
+    - rust-analysis
+    - rls-preview
+  tags: rust-components
+- debug: var=components_output
+
 - name: Touch last_toolchain_check file to avoid upgrading again
   command: "touch ~/.cargo/last_toolchain_check"
   when: last_toolchain_check | success
