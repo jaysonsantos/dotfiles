@@ -14,7 +14,7 @@
     - python_pyenv
     # - python_personal
     # - python_eatfirst
-    - hub
+    - {role: hub, tags: hub}
     - zsh-autoenv
     - rg
     - exa
