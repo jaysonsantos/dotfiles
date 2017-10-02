@@ -16,7 +16,6 @@
     # - python_eatfirst
     - {role: hub, tags: hub}
     - zsh-autoenv
-    - rg
     - exa
     - tmux
     - fzf
