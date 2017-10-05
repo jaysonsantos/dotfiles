@@ -10,7 +10,7 @@
     - git
     - package_manager
     - {role: zsh, tags: ['bootstrap']}
-    - vim
+    - {role: vim, tags: vim}
     - python_pyenv
     # - python_personal
     # - python_eatfirst

@@ -27,8 +27,7 @@ git_signing_key: 32CAA472083D88E2
 
 # Whether to install plugins automatically. If not, just run
 # :PlugInstall while in vim.
-vim_install_plugins: no
-
+vim_install_plugins: true
 
 # Utilities that don't get installed by a role
 osx_homebrew_packages:
@@ -101,6 +100,7 @@ npm_global_packages:
   # - eslint-config-airbnb
   # - eslint-plugin-react
   # - babel-eslint
+
 apt_packages:
   - curl
   - wget
