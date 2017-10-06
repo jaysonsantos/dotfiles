@@ -11,10 +11,6 @@ Icon
 .Spotlight-V100
 .Trashes
 
-### SublimeText ###
-# SublimeText project files
-*.sublime-workspace
-
 ## autoenv ##
 .env
 .autoenv
@@ -26,6 +22,7 @@ Icon
 .python-version
 docs/_build
 .ipynb_checkpoints
+pylint_changed_files.sh
 
 ### JetBrains ###
 .idea
@@ -41,4 +38,5 @@ _sandbox
 
 # Editors
 *.swp
-
+*.sublime-workspace
+.vscode/
