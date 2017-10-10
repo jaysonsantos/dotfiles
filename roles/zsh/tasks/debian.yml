@@ -10,6 +10,6 @@
 
 - name: Change default shell to zsh
   user:
-    name: "{{ ansible_ssh_user }}"
+    name: "{{ ansible_user }}"
     shell: "{{ zsh_path.stdout }}"
   become: yes
