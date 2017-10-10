@@ -104,7 +104,9 @@ npm_global_packages:
 
 apt_packages:
   - curl
+  - dos2unix
   - wget
+  - gnupg2
   - htop
   - lsof
   - strace
