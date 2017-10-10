@@ -81,3 +81,9 @@
 [commit]
         gpgsign = true
 {% endif %}
+
+{% if ansible_os_family == 'Debian' %}
+[gpg]
+        program = gpg2
+{% endif %}
+
