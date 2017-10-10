@@ -16,9 +16,11 @@
     # - python_eatfirst
     - {role: hub, tags: hub}
     - zsh-autoenv
+    - {role: ccat, tags: ccat}
     - exa
     - tmux
     - fzf
     - gnome_do
     - {role: rust, tags: rust}
     - {role: osx, when: ansible_os_family == "Darwin"}
+
