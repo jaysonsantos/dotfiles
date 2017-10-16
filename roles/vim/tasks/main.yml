@@ -45,3 +45,10 @@
 - name: Install plugins
   command: vim +PlugInstall +qall
   when: vim_install_plugins
+
+- name: Configure wakatime
+  copy:
+    src: "{{ dotfiles_home }}/roles/vim/files/wakatime.cfg"
+    dest: "{{ dotfiles_user_home }}/.wakatime.cfg"
+  tags: bootstrap
+
