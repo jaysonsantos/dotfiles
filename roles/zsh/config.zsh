@@ -2,7 +2,7 @@
 DISABLE_CORRECTION="true"
 unsetopt correct
 unsetopt correct_all
-if test "$(uname -a | grep -i darwin)"; then
+if [[ "$OSTYPE" == darwin* ]]; then
     # ==> Caveats
     # Add the following to your zshrc to access the online help:
     unalias run-help
