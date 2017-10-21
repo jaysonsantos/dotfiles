@@ -170,6 +170,9 @@ Plug 'rust-lang/rust.vim'
 " --- Time tracker ---
 Plug 'wakatime/vim-wakatime'
 
+" --- .editorconfig ---
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 filetype plugin indent on
 """ end plugins """
