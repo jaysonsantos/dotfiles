@@ -23,6 +23,7 @@ Icon
 docs/_build
 .ipynb_checkpoints
 pylint_changed_files.sh
+.mypy_cache/
 
 ### JetBrains ###
 .idea
