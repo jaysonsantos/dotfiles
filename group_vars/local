@@ -112,3 +112,16 @@ apt_packages:
   - strace
   - gnupg-agent
 
+
+rust_binaries:
+  - {pkg: cargo-update, bin: cargo-install-update}
+  - {pkg: clippy, bin: cargo-clippy}
+  - {pkg: clog-cli, bin: clog}
+  - {pkg: exa, bin: exa}
+  - {pkg: ripgrep, bin: rg}
+  - {pkg: diesel_cli, bin: diesel}
+
+rust_components:
+  - rust-src
+  - rust-analysis
+  - rls-preview

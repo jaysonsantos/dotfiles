@@ -27,12 +27,9 @@
   command: "~/.cargo/bin/cargo +nightly install {{ item.pkg }}"
   args:
     creates: "~/.cargo/bin/{{ item.bin }}"
+  when: rust_binaries
   with_items:
-      - {pkg: cargo-update, bin: cargo-install-update}
-      - {pkg: clippy, bin: cargo-clippy}
-      - {pkg: clog-cli, bin: clog}
-      - {pkg: exa, bin: exa}
-      - {pkg: ripgrep, bin: rg}
+    - "{{ rust_binaries }}"
 
 - name: Update installed binaries
   command: "~/.cargo/bin/cargo +nightly install-update -a"
@@ -43,10 +40,9 @@
 - name: Install components
   shell: "~/.cargo/bin/rustup component add {{ item }}"
   register: components_output
+  when: rust_components
   with_items:
-    - rust-src
-    - rust-analysis
-    - rls-preview
+    - "{{ rust_components }}"
   tags: rust-components
 - debug: var=components_output
 
