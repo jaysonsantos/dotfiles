@@ -28,10 +28,12 @@ git_signing_key: 32CAA472083D88E2
 # Whether to install plugins automatically. If not, just run
 # :PlugInstall while in vim.
 vim_install_plugins: true
+vim_install_macvim: false
 
 # Utilities that don't get installed by a role
 osx_homebrew_packages:
   - curl
+  - ctags
   - wget
   - tree
   - highlight
@@ -45,12 +47,13 @@ osx_homebrew_packages:
   - memcached
   - pgbadger
   - imagemagick
+  - mysql-connector-c
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
   # Browsers
   - google-chrome
-  - firefox
+  - firefox-beta
 
   # Network
   - filezilla
@@ -61,6 +64,7 @@ osx_cask_packages:
   - raindropio
   - docker
   - pycharm
+  - java
 
   # Vagrant/Virtualbox
   - virtualbox
@@ -111,7 +115,8 @@ apt_packages:
   - lsof
   - strace
   - gnupg-agent
-
+  - libmysqlclient-dev
+  - libpq-dev
 
 rust_binaries:
   - {pkg: cargo-update, bin: cargo-install-update}
