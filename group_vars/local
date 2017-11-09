@@ -53,6 +53,7 @@ osx_homebrew_packages:
 osx_cask_packages:
   # Browsers
   - google-chrome
+  - chrome-remote-desktop-host
   - firefox-beta
 
   # Network
