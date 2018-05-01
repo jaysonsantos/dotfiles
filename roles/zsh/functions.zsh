@@ -80,3 +80,7 @@ function paste() {
   local file=${1:-/dev/stdin}
   curl --data-binary @${file} https://paste.rs
 }
+
+function countfiles() {
+  find "$1" -type f | wc -l
+}
