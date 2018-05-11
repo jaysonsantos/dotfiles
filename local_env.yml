@@ -16,8 +16,8 @@
     # - python_eatfirst
     - {role: hub, tags: hub}
     - zsh-autoenv
-    - {role: ccat, tags: ccat}
     - exa
+    - bat
     - tmux
     - fzf
     - gnome_do
