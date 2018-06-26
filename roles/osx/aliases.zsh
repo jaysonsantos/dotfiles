@@ -1,5 +1,5 @@
 alias cask="brew cask"
-alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+alias services="brew services"
 
 alias sha256="shasum -a 256"
 
