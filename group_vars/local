@@ -125,13 +125,15 @@ apt_packages:
 
 rust_binaries:
   - {pkg: cargo-update, bin: cargo-install-update}
-  - {pkg: clippy, bin: cargo-clippy}
   - {pkg: clog-cli, bin: clog}
   - {pkg: exa, bin: exa}
   - {pkg: ripgrep, bin: rg}
   - {pkg: diesel_cli, bin: diesel}
+  - {pkg: afl, bin: cargo-afl}
+  - {pkg: cargo-outdated, bin: cargo-outdated}
 
 rust_components:
   - rust-src
   - rust-analysis
   - rls-preview
+  - clippy-preview
