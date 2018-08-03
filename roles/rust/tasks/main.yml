@@ -35,6 +35,7 @@
   command: "~/.cargo/bin/cargo +nightly install-update -a"
   register: updates_output
   when: last_toolchain_check is success
+  ignore_errors: true
 - debug: var=updates_output
 
 - name: Install components
@@ -47,5 +48,5 @@
 - debug: var=components_output
 
 - name: Touch last_toolchain_check file to avoid upgrading again
-  command: "touch ~/.cargo/last_toolchain_check"
+  file: path="~/.cargo/last_toolchain_check" state=touch
   when: last_toolchain_check is success
