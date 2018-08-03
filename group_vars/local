@@ -36,6 +36,7 @@ osx_homebrew_packages:
   - ctags
   - wget
   - tree
+  - pre-commit
   - highlight
   - terminal-notifier
   - wifi-password
