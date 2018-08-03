@@ -80,6 +80,7 @@ osx_cask_packages:
 
   # Backup/storage
   - dropbox
+  - s3cmd
 
   # Media/Music
   - vlc
