@@ -68,6 +68,7 @@ osx_cask_packages:
   - pycharm
   - java
   - toggl
+  - zulip
 
   # Vagrant/Virtualbox
   - virtualbox
