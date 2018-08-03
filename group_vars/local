@@ -40,7 +40,6 @@ osx_homebrew_packages:
   - highlight
   - terminal-notifier
   - wifi-password
-  - htop-osx
   - httpie
   - diff-so-fancy
   - docker-clean
