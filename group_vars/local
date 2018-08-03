@@ -48,6 +48,7 @@ osx_homebrew_packages:
   - pgbadger
   - imagemagick
   - mysql-connector-c
+  - speedread
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
