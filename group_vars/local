@@ -131,6 +131,7 @@ rust_binaries:
   - {pkg: diesel_cli, bin: diesel}
   - {pkg: afl, bin: cargo-afl}
   - {pkg: cargo-outdated, bin: cargo-outdated}
+  - {pkg: hyperfine, bin: hyperfine}
 
 rust_components:
   - rust-src
