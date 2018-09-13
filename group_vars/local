@@ -134,6 +134,7 @@ rust_binaries:
   - {pkg: afl, bin: cargo-afl}
   - {pkg: cargo-outdated, bin: cargo-outdated}
   - {pkg: hyperfine, bin: hyperfine}
+  - {pkg: bat, bin: bat}
 
 rust_components:
   - rust-src
