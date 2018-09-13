@@ -49,6 +49,7 @@ osx_homebrew_packages:
   - imagemagick
   - mysql-connector-c
   - speedread
+  - ipcalc
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
@@ -122,6 +123,7 @@ apt_packages:
   - gnupg-agent
   - libmysqlclient-dev
   - libpq-dev
+  - ipcalc
 
 rust_binaries:
   - {pkg: cargo-update, bin: cargo-install-update}
