@@ -135,6 +135,8 @@ rust_binaries:
   - {pkg: cargo-outdated, bin: cargo-outdated}
   - {pkg: hyperfine, bin: hyperfine}
   - {pkg: bat, bin: bat}
+  - {pkg: evcxr_repl, bin: evcxr_repl}
+  - {pkg: evcxr_jupyter, bin: evcxr_jupyter}
 
 rust_components:
   - rust-src
