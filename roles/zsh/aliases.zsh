@@ -19,3 +19,5 @@ alias ef='hello work'
 alias h='hello home'
 alias elb-headers="echo 'type timestamp elb client target request_processing_time target_processing_time response_processing_time elb_status_code target_status_code received_bytes sent_bytes request user_agent ssl_cipher ssl_protocol target_group_arn trace_id domain_name chosen_cert_arn matched_rule_priority request_creation_time actions_executed filler?'"
 alias encode-json-string="python3 -c 'import json, sys; print(json.dumps(sys.argv[1]))'"
+alias lowercase="tr '[:upper:]' '[:lower:]'"
+alias uppercase="tr '[:lower:]' '[:upper:]'"
