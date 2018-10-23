@@ -173,6 +173,9 @@ Plug 'wakatime/vim-wakatime'
 " --- .editorconfig ---
 Plug 'editorconfig/editorconfig-vim'
 
+" --- Go | golang support ---
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries'  }
+
 call plug#end()
 filetype plugin indent on
 """ end plugins """
