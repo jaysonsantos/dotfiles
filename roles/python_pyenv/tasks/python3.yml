@@ -1,10 +1,10 @@
-- name: "Install Python {{ latest_python_36 }}"
+- name: "Install Python"
   pyenv:
-    version: "{{ latest_python_36 }}"
-
-- name: "Install Python {{ latest_python_35 }}"
-  pyenv:
-    version: "{{ latest_python_35 }}"
+    version: "{{ item }}"
+  with_items:
+    - "{{ latest_python_35 }}"
+    - "{{ latest_python_36 }}"
+    - "{{ latest_python_37 }}"
 
 - name: virtualenv for Jupyter
   pyenv:

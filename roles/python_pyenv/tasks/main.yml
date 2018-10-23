@@ -22,7 +22,7 @@
   pyenv:
     subcommand: global
     versions:
-    - "{{ latest_python_36 }}"
+    - "{{ latest_python_37 }}"
     - "{{ latest_python_27 }}"
     - ipython2
     - tools3

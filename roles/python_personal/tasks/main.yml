@@ -1,7 +1,7 @@
 - name: python-binary-memcached virtualenv
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36 }}"
+    version: "{{ latest_python_37 }}"
     virtualenv_name: python-binary-memcached
 
 - name: Set pyenv local version
