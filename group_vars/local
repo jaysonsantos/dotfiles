@@ -144,3 +144,11 @@ rust_components:
   - rust-analysis
   - rls-preview
   - clippy-preview
+
+rbenv:
+  env: user
+  default_ruby: 2.5.3
+  rbenv_user_profile: no
+  rubies:
+    - version: 2.3.6
+    - version: 2.5.3
