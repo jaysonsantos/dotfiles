@@ -86,7 +86,6 @@ osx_cask_packages:
 
   # Media/Music
   - vlc
-  - beardedspice
 
   # Images
   # - imageoptim  # optimizing images
