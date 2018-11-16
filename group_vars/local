@@ -75,13 +75,14 @@ osx_cask_packages:
   - toggl
   - terraform
   - 1password
+  - authy
 
   # Vagrant/Virtualbox
   - virtualbox
 
   # Chat
   - slack
-  - zoom
+  - zoomus
   - telegram
   - quassel-client
 
