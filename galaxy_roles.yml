@@ -2,6 +2,7 @@
 # https://docs.ansible.com/ansible/latest/galaxy.html#installing-multiple-roles-from-a-file
 
 - src: suzuki-shunsuke.pyenv
+  version: v3.2.4
 - src: suzuki-shunsuke.pyenv-virtualenv
 - src: suzuki-shunsuke.pyenv-module
 - src: zzet.rbenv
