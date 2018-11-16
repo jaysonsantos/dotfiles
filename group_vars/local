@@ -81,6 +81,7 @@ osx_cask_packages:
 
   # Chat
   - slack
+  - zoom
   - telegram
   - quassel-client
 
