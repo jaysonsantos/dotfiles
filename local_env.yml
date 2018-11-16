@@ -24,5 +24,5 @@
     - {role: rust, tags: rust}
     - {role: osx, when: ansible_os_family == "Darwin"}
     - {role: keychain, tags: keychain}
-    - {role: zzet.rbenv, tags: ruby}
+    - {role: "zzet.rbenv", tags: ruby}
 

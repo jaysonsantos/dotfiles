@@ -50,6 +50,10 @@ osx_homebrew_packages:
   - mysql-connector-c
   - speedread
   - ipcalc
+  - gpg2
+  - zmq
+  - libpq
+  - mysql-client
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
@@ -69,8 +73,8 @@ osx_cask_packages:
   - pycharm
   - java
   - toggl
-  - zulip
   - terraform
+  - 1password
 
   # Vagrant/Virtualbox
   - virtualbox
