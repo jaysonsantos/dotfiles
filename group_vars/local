@@ -142,7 +142,7 @@ rust_binaries:
   - {pkg: hyperfine, bin: hyperfine}
   - {pkg: bat, bin: bat}
   - {pkg: evcxr_repl, bin: evcxr}
-  - {pkg: evcxr_jupyter, bin: evcxr_jupyter}
+  - {pkg: cargo-geiger, bin: cargo-geiger}
 
 rust_components:
   - rust-src
