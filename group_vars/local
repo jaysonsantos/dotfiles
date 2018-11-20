@@ -54,6 +54,9 @@ osx_homebrew_packages:
   - zmq
   - libpq
   - mysql-client
+  - awscli
+  - terraform
+  - jq
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
@@ -65,6 +68,8 @@ osx_cask_packages:
   # Network
   - filezilla
   - ngrok
+  - zerotier-one
+  - tunnelblick
 
   # Utilities
   - iterm2
@@ -73,9 +78,9 @@ osx_cask_packages:
   - pycharm
   - java
   - toggl
-  - terraform
   - 1password
   - authy
+  - keybase
 
   # Vagrant/Virtualbox
   - virtualbox
