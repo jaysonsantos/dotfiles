@@ -9,6 +9,7 @@
   roles:
     - git
     - package_manager
+    - {role: knot_resolver, tags: dns}
     - {role: zsh, tags: ['bootstrap']}
     - {role: vim, tags: vim}
     - python_pyenv

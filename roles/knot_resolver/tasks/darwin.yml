@@ -1,0 +1,5 @@
+- name: Install knot-resolver with Homebrew
+  homebrew:
+    name: knot-resolver
+    state: latest
+    update_homebrew: no

@@ -1,0 +1,25 @@
+- include: "{{ ansible_os_family | lower }}.yml"
+
+- name: Load variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_os_family | lower }}-vars.yml"
+
+- name: Configure knot-resolver
+  become: "{{ knot_sudo_required }}"
+  register: knot_configuration_changed
+  template:
+      dest: "{{ knot_resolver_config }}"
+      src: config.lua
+      backup: yes
+
+- name: Restart knot-resolver
+  service:
+    name: knot-resolver
+    state: restarted
+  when: ansible_os_family != "Darwin" and knot_configuration_changed.changed
+
+- name: Restart knot-resolver
+  command: "brew services restart knot-resolver"
+  when: ansible_os_family == "Darwin" and knot_configuration_changed.changed
+  become: yes

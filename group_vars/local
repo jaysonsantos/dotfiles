@@ -58,6 +58,9 @@ osx_homebrew_packages:
   - terraform
   - jq
 
+  # DNS
+  - knot-resolver
+
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
   # Browsers
@@ -162,3 +165,7 @@ rbenv:
   rubies:
     - version: 2.3.6
     - version: 2.5.3
+
+knot_resolver_custom_servers:
+  10.8.0.1: [production.]
+  10.10.0.1: [test.]

@@ -1,0 +1,2 @@
+knot_resolver_config: /usr/local/etc/kresd/config
+knot_sudo_required: no
