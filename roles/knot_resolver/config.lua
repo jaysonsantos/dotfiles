@@ -6,10 +6,10 @@ modules = {
         period = 6*(60/15) -- track last 6 hours
     },
     'stats',
-    -- http = {
-    --     host = 'localhost',
-    --     port = 8053,
-    -- }
+    http = {
+        host = '127.0.0.1',
+        port = 8053,
+    }
 }
 
 net = { '127.0.0.1' }

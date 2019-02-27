@@ -1,5 +1,16 @@
 - name: Install knot-resolver with Homebrew
   homebrew:
-    name: knot-resolver
+    name:
+      - knot-resolver
+      - luarocks
+      - openssl
     state: latest
     update_homebrew: no
+
+- name: Install http module for lua
+  command: >-
+    luarocks --lua-dir=/usr/local/opt/lua@5.1
+      --tree /usr/local/
+      install http
+      CRYPTO_DIR=/usr/local/opt/openssl
+      OPENSSL_DIR=/usr/local/opt/openssl/
