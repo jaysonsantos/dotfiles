@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/dotfiles
+export HISTSIZE=10000000
+export SAVEHIST=10000000
 
 # all of our zsh files
 typeset -U config_files
