@@ -6,10 +6,10 @@
     - "{{ ansible_os_family | lower }}-vars.yml"
 
 - name: Configure knot-resolver
-  become: "{{ knot_sudo_required }}"
+  become: "{{ knot_resolver_sudo_required }}"
   register: knot_configuration_changed
   template:
-      dest: "{{ knot_resolver_config }}"
+      dest: "{{ knot_resolver_config_file }}"
       src: config.lua
       backup: yes
 

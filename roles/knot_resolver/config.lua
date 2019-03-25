@@ -6,10 +6,12 @@ modules = {
         period = 6*(60/15) -- track last 6 hours
     },
     'stats',
+    {% if knot_resolver_enable_http_server %}
     http = {
         host = '127.0.0.1',
         port = 8053,
     }
+    {% endif %}
 }
 
 net = { '127.0.0.1' }

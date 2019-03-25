@@ -8,6 +8,7 @@
     update_homebrew: no
 
 - name: Install http module for lua
+  when: knot_resolver_enable_http_server
   command: >-
     luarocks --lua-dir=/usr/local/opt/lua@5.1
       --tree /usr/local/
