@@ -1,3 +1,9 @@
 - name: Install fzf with Homebrew
   homebrew: name=fzf state=latest
   when: ansible_os_family == "Darwin"
+
+- name: Write sh files
+  command: /usr/local/opt/fzf/install --key-bindings --completion --no-update-rc
+  args:
+    creates: ~/.fzf.zsh
+  when: ansible_os_family == 'Darwin'
