@@ -25,6 +25,7 @@
     - nightly
   register: toolchains_output
   when: last_toolchain_check is success
+  ignore_errors: true
 - debug: var=toolchains_output
 
 - name: Install rust utils

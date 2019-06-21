@@ -8,11 +8,11 @@
     PYENV_ROOT: "{{ pyenv_root }}"
   roles:
     - git
-    - package_manager
+    - {role: package_manager, tags: pkgs}
     - {role: knot_resolver, tags: dns}
     - {role: zsh, tags: ['bootstrap']}
     - {role: vim, tags: vim}
-    - python_pyenv
+    - {role: python_pyenv, tags: python}
     # - python_personal
     # - python_eatfirst
     - {role: hub, tags: hub}
@@ -20,7 +20,7 @@
     - exa
     - bat
     - tmux
-    - fzf
+    - {role: fzf, tags: fzf}
     - gnome_do
     - {role: rust, tags: rust}
     - {role: osx, when: ansible_os_family == "Darwin"}

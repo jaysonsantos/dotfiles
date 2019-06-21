@@ -57,9 +57,13 @@ osx_homebrew_packages:
   - awscli
   - terraform
   - jq
+  - coreutils
+  - gist
+  - nvm
 
   # DNS
   - knot-resolver
+  - terraform
 
 # Mac Apps to be installed with homebrew-cask
 osx_cask_packages:
@@ -84,6 +88,7 @@ osx_cask_packages:
   - 1password
   - authy
   - keybase
+  - dash
 
   # Vagrant/Virtualbox
   - virtualbox
@@ -108,11 +113,11 @@ osx_cask_packages:
   # - nvalt
   # - skitch
   # Fonts
-  - font-ubuntu
-  - font-cousine
+  # - font-ubuntu
+  # - font-cousine
 
   # Databases
-  - psequel  # postgres client
+  - dbeaver
 
   # VPN
   - nordvpn
@@ -151,6 +156,14 @@ rust_binaries:
   - {pkg: bat, bin: bat}
   - {pkg: evcxr_repl, bin: evcxr}
   - {pkg: cargo-geiger, bin: cargo-geiger}
+  - {pkg: hexyl, bin: hexyl}
+  - {pkg: fd-find, bin: fd}
+
+  - pkg: cargo-generate
+    bin: cargo-generate
+
+  - pkg: wasm-pack
+    bin: wasm-pack
 
 rust_components:
   - rust-src
@@ -158,10 +171,13 @@ rust_components:
   - rls-preview
   - clippy-preview
 
+rbenv_users: [jayson]
 rbenv:
   env: user
+  version: v1.1.1
   default_ruby: 2.5.3
   rbenv_user_profile: no
+  rbenv_owner: jayson
   rubies:
     - version: 2.3.6
     - version: 2.5.3
@@ -169,3 +185,5 @@ rbenv:
 knot_resolver_custom_servers:
   10.8.0.1: [production.]
   10.10.0.1: [test.]
+
+knot_resolver_enable_http_server: yes

@@ -15,7 +15,7 @@
 - name: virtualenv for Python 3 tools
   pyenv:
     subcommand: virtualenv
-    version: "{{ latest_python_36 }}"
+    version: "{{ latest_python_37 }}"
     virtualenv_name: tools3
 
 - name: Install jupyter

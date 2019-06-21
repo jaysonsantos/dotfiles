@@ -42,3 +42,5 @@ _sandbox
 *.sublime-workspace
 .vscode/
 .#*
+
+installed/*
