@@ -46,7 +46,7 @@
 - name: Install components
   shell: "~/.cargo/bin/rustup component add {{ item }}"
   register: components_output
-  when: rust_components
+  when: rust_components | bool
   with_items:
     - "{{ rust_components }}"
   tags: rust-components
