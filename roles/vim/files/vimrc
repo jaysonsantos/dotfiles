@@ -6,7 +6,7 @@ call plug#begin()
 " ESSENTIALS
 Plug 'tpope/vim-sensible' " Sensible defaults
 Plug 'rstacruz/vim-opinion' " More sensible defaults
-Plug 'ervandew/supertab' " Tab complete everything
+" Plug 'ervandew/supertab' " Tab complete everything
 Plug 'ctrlpvim/ctrlp.vim' " Fuzzy-matching go-to file
 nnoremap <C-b> :CtrlPBuffer<CR>
 map <C-t> :CtrlPBufTag<CR>
@@ -19,7 +19,7 @@ if has('python') ||  has('python3')
 endif
 let g:ctrlp_funky_syntax_highlight = 1
 Plug 'dyng/ctrlsf.vim'  " ag-powered search with in-place editing
-let g:ctrlsf_ackprg = 'rg'
+let g:ctllsf_ackprg = 'rg'
 nmap     <C-f>f :CtrlSF ''<Left>
 nmap     <C-f>n <Plug>CtrlSFCwordPath
 nnoremap <C-f>t :CtrlSFToggle<CR>
@@ -55,6 +55,7 @@ nmap <leader>= <Plug>(ale_fix)
 nmap <leader>; :lopen<CR>
 let g:ale_maximum_file_size = 500000  " Don't lint large files (> 500KB), it can slow things down
 let g:ale_linters = {}
+let g:ale_linters.vim = ['vint']
 let g:ale_linters.javascript = ['eslint']
 let g:ale_linters.python = ['flake8']
 let g:ale_linters.rust = ['rls']
@@ -174,6 +175,8 @@ map <C-c>j <Plug>(jsdoc)
 
 " --- Rust ---
 Plug 'rust-lang/rust.vim'
+nmap <leader>r :RustRun<CR>
+nmap <leader>t :RustTest<CR>
 
 " --- Time tracker ---
 Plug 'wakatime/vim-wakatime'
@@ -183,6 +186,9 @@ Plug 'editorconfig/editorconfig-vim'
 
 " --- Go | golang support ---
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries'  }
+
+" --- Auto competion ---
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 filetype plugin indent on
