@@ -1,0 +1,15 @@
+
+- name: Update pacman cache
+  pacman: update_cache=yes
+  when: package_update
+  become: true
+
+- name: Upgrade pacman packages
+  pacman: upgrade=yes
+  when: package_upgrade
+  become: true
+
+- name: Install pacman packages
+  pacman: name={{item}}
+  with_items: "{{ pacman_packages }}"
+  become: true
