@@ -1,0 +1,3 @@
+- name: Install hub with pacman
+  pacman: name=hub state=present
+  become: true
